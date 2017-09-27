@@ -20,14 +20,14 @@ public class BrickBreakerStudent {
          Level levelnum= new Level();
          BrickRow row = new BrickRow();
          
-        for (int i=0; i<23; i++) {
-            
-           levelnum.setBrickRows(i, row);
-            levelnum.setLevelNum(i);
+        for (int i=0; i<11; i++) {   
+        levelnum.setBrickRows(i, row);
+        levelnum.setLevelNum(i);
         
+   
         for(int j=0; j<20;j++){
             
-            row.setBrickMaskValue(j,true );
+            row.setBrickMaskValue(j, true);
             row.setPointValue(10);
             row.setColor(Color.BEIGE);
             

@@ -14,19 +14,20 @@ import javafx.scene.paint.Color;
 public class BrickRow {
     private int pointValue;
     private Color color;
-    private int[] brickmask;
+    private int[] brickmask;  // didnt change the brickmask to boolean I got confused when I saw the update
 
     /*initializes to java default values*/
     public BrickRow() {
         pointValue = 0;
         color = new Color(0,0,0,0);
-        brickmask = new int [20];
+         brickmask= new int[20];
 
     }
     /*assigns variables to default and puts the values of bMask in the array brickmask in location i*/
     public BrickRow(int ptVal, Color clr, String bMask) {
         pointValue = ptVal;
         color = clr;
+        brickmask=new int [(bMask.length()) ];
         for(int i=0;i<brickmask.length;i++){
             if(bMask.charAt(i)=='0'){
                 brickmask[i]=0;

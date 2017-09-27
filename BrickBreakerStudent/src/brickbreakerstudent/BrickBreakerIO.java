@@ -5,17 +5,31 @@
  */
 package brickbreakerstudent;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**
  *
  * @author charles randall
  */
 public class BrickBreakerIO {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    
+    public static void readConfigFile(String cFileName) throws FileNotFoundException{
+      try{
+        Scanner input = new Scanner(new File(cFileName));
+       int lvlnum= Integer.parseInt(input.next());
+       
+       
+       
+       
+       
+      }
+      catch(java.io.FileNotFoundException ex){
+          
+      }
+        
+       
     }
     
 }

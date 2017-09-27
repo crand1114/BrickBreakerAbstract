@@ -14,14 +14,16 @@ public class Level {
     private BrickRow[] brickRows;
     
     public Level(){
-        levelNum=0;
-        brickRows=new BrickRow[24];
+        
+       brickRows=new BrickRow[12];
         
     }
     public Level(int levelNum, int numBrickRows){
         this.levelNum=levelNum;
         brickRows=new BrickRow[numBrickRows];
-        
+        for(int i=0; i<numBrickRows; i++){
+	brickRows[i]=new BrickRow();
+    }
     }
 
     /**
