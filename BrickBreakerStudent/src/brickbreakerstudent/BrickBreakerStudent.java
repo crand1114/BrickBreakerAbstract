@@ -19,7 +19,7 @@ public class BrickBreakerStudent {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       PlayerProfile player=new PlayerProfile();
+       /*PlayerProfile player=new PlayerProfile();
        
        player.setName("Charles");
        String item ="brickbreakerprofiles.txt";
@@ -36,9 +36,9 @@ public class BrickBreakerStudent {
        }
        System.out.println(player.toString());
            
-        /*try {
+        */try {
             BrickBreakerIO.readConfigFile("brickbreaker.txt");
-            /Level levelnum= new Level();
+            /*Level levelnum= new Level();
             
             BrickRow row = new BrickRow();
             
@@ -56,10 +56,10 @@ public class BrickBreakerStudent {
             }
             System.out.println(levelnum.toString()+row.toString());
             
-}
+}*/
         } catch (FileNotFoundException ex) {
             Logger.getLogger(BrickBreakerStudent.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+        }
        
     }  
        
