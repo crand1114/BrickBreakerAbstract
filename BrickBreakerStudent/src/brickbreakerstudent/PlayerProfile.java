@@ -26,7 +26,11 @@ public class PlayerProfile {
    }
    public String toString(){
       String format= " ";
-      format+= name+System.lineSeparator()+ numGamesPlayed+System.lineSeparator()+highScore+System.lineSeparator()+savedGames;
+      format+= name+System.lineSeparator()+ numGamesPlayed+System.lineSeparator()+highScore+System.lineSeparator()+savedGames.size();
+      for(int i=0;i<savedGames.size();i++){
+          format+=savedGames.get(i);
+          
+      }
       return format;
        }
 
