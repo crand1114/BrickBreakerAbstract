@@ -57,9 +57,9 @@ public class Level {
     brickrows in the specific level go to next line and show the brickrow */
     
     public String toString(){
-      String level="Level: " +  levelNum + System.lineSeparator() + brickRows.length;
+      String level= +  levelNum + System.lineSeparator() + brickRows.length;
       for(int i=0;i<brickRows.length;i++){
-       level += System.lineSeparator()+"Row: " + i +System.lineSeparator()+ brickRows[i]; 
+       level += System.lineSeparator()+ i +System.lineSeparator()+ brickRows[i]; 
     }
       return level;
 }

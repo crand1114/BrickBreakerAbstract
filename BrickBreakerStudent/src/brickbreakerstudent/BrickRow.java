@@ -7,6 +7,7 @@ package brickbreakerstudent;
 
 import javafx.scene.paint.Color;
 
+
 /**
  *
  * @author CDOGG_000
@@ -98,9 +99,10 @@ public class BrickRow {
         this.color = color;
     }
 /* converting the red green and blue values from 1-0 to 0-255 and separating them with space*/
+    @Override
     public String toString() {
         String RGB = " ";
-        RGB += (int) (color.getRed() * 255) + " " + (int) (color.getGreen() * 255) + " " + (int) (color.getBlue() * 255);
+        RGB += (int) (color.getRed() ) + " " + (int) (color.getGreen() ) + " " + (int) (color.getBlue() );
         String brick = " ";
 
         for (int i = 0; i < brickmask.length; i++) {
