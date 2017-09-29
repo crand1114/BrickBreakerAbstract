@@ -5,7 +5,7 @@
  */
 package brickbreakerstudent;
 
-import javafx.scene.paint.Color;
+import java.awt.Color;
 
 
 /**
@@ -20,7 +20,7 @@ public class BrickRow {
     /*initializes to java default values*/
     public BrickRow() {
         pointValue = 0;
-        color = new Color(0,0,0,0);
+        color = new Color(0,0,0);
          brickmask= new int[20];
 
     }
@@ -102,7 +102,7 @@ public class BrickRow {
     @Override
     public String toString() {
         String RGB = " ";
-        RGB += (int) (color.getRed() ) + " " + (int) (color.getGreen() ) + " " + (int) (color.getBlue() );
+        RGB += (int) (color.getRed() ) + " " + (int) (color.getGreen()) + " " + (int) (color.getBlue() );
         String brick = " ";
 
         for (int i = 0; i < brickmask.length; i++) {

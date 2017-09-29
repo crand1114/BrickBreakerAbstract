@@ -8,7 +8,7 @@ package brickbreakerstudent;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import javafx.scene.paint.Color;
+import java.awt.Color;
 
 
 
@@ -35,7 +35,7 @@ public class BrickBreakerIO {
                int red=Integer.parseInt(input.next());
                int green=Integer.parseInt(input.next());
                int blue=Integer.parseInt(input.next());
-               Color rgb=new Color(red,green,blue,0);
+               Color rgb=new Color(red,green,blue);
                int ptVal=Integer.parseInt(input.next());
                String bMask=input.next();
                BrickRow bkset=new BrickRow(ptVal,rgb,bMask);
