@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author charles randall
  */
 public class PlayerProfile {
-        private String name;
+    private String name;
     private int numGamesPlayed;
     private int highScore;
     private ArrayList<String>savedGames;
@@ -22,18 +22,9 @@ public class PlayerProfile {
     }
    public PlayerProfile(String name){
        this.name=name;
+       savedGames=new ArrayList<>();
        
    }
-   public String toString(){
-      String format= " ";
-      format+= name+System.lineSeparator()+ numGamesPlayed+System.lineSeparator()+highScore+System.lineSeparator()+savedGames.size();
-      for(int i=0;i<savedGames.size();i++){
-          format+=savedGames.get(i);
-          
-      }
-      return format;
-       }
-
     /**
      * @return the name
      */
@@ -78,16 +69,32 @@ public class PlayerProfile {
     public int getNumSavedGames(){
         return savedGames.size();
     }
-    public String getSavedGames(int index){
+    public String getSavedGame(int index){
         return savedGames.get(index);
-    }
-   public void setSavedGames(int index, String item){
-       savedGames.add(index, item);
-   }
-   public void addSavedGames(String item){
+    }  
+    public void addSavedGame(String item){
        savedGames.add(item);
    }
-   public String deleteSavedGames(int index){
-       return savedGames.remove(index);
+   public void setSavedGame(int index, String item){
+        savedGames.add(index, item);
    }
+
+   public String deleteSavedGame(int index){
+       return savedGames.remove(index);
+   }   
+   public String toString(){
+      String format= "";
+      format+= name+System.lineSeparator()+ numGamesPlayed+System.lineSeparator()+highScore+System.lineSeparator()+savedGames.size();
+      
+      for(int i=0;i<savedGames.size();i++){
+     format+=System.lineSeparator()+savedGames.get(i)+i;
+     
+     
+     }
+     return format;
+     
+     
+      
+     
+}
 }

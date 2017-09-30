@@ -13,5 +13,46 @@ import java.util.ArrayList;
  */
 public class GameProfiles {
 
+    private PlayerProfile selectedProfile;
+    private PlayerProfile highGameProfile;
+    private ArrayList<PlayerProfile>profiles;
     
+    public GameProfiles(){
+        profiles=new ArrayList<PlayerProfile>();
+    }
+    public PlayerProfile getSelectedProfile(){
+        return selectedProfile;
+    }
+
+    /**
+     *
+     */
+    public PlayerProfile getHighGameProfile(){
+       return highGameProfile;
+}
+    public void setHighGameProflie(PlayerProfile prof){
+    highGameProfile=prof;    
+    }
+    public int getNumProfiles(){
+        return profiles.size();
+    }
+    public PlayerProfile getProflie(int index){
+        return profiles.get(index);
+    }
+    public void setProfile(int index,PlayerProfile item){
+        profiles.add(index, item);
+    }
+    public void addProfile(PlayerProfile item){
+        profiles.add(item);
+    }
+    public PlayerProfile deleteProfile(int index){
+        return profiles.remove(index);
+    }
+    public String toString(){
+        String playform="";
+        for(int i=0;i<profiles.size();i++){
+            playform+=profiles.get(i)+System.lineSeparator();
+    }
+        return playform;
+}
 }

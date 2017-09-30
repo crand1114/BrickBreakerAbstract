@@ -35,8 +35,7 @@ public class BrickBreakerIO {
                int red=Integer.parseInt(input.next());
                int green=Integer.parseInt(input.next());
                int  blue=Integer.parseInt(input.next());
-                //clr=clr = new Color(red, green, blue, 0);
-               Color clr;
+                Color clr;
                clr=Color.rgb(red, green, blue);
                int ptVal=Integer.parseInt(input.next());
                String bMask=input.next();

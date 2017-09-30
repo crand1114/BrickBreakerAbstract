@@ -19,24 +19,28 @@ public class BrickBreakerStudent {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       /*PlayerProfile player=new PlayerProfile();
-       
-       player.setName("Charles");
-       String item ="brickbreakerprofiles.txt";
-       for(int i=0;i<9;i++){
-       player.setNumGamesPlayed(i);
-      player.setSavedGames(i,item);
-      player.addSavedGames(item);
-      player.deleteSavedGames(i);
-       
-           
-       }
-       for(int i=0;i<21;i++){
-       player.setHighScore(1997+i);    
-       }
-       System.out.println(player.toString());
-           
-        */try {
+        GameProfiles game = new GameProfiles();
+        PlayerProfile player=new PlayerProfile("Charles");
+        PlayerProfile player2 = new PlayerProfile("Player2");
+        player.setNumGamesPlayed(6);
+        String item="save";
+        String item2="newsave";
+        int j=0;
+        for(int i=0;i<player.getNumGamesPlayed();i++){
+        player.setHighScore(2017);
+        player.addSavedGame(item);
+        player.addSavedGame(item);
+        player2.setNumGamesPlayed(4);
+        player2.setHighScore(2018);
+        player2.addSavedGame(item);
+        
+          }
+       //System.out.println(player.toString()+player2.toString());
+       game.addProfile(player);
+       game.addProfile(player2);
+       System.out.println(game.toString());  
+    }
+        /*try {
             BrickBreakerIO.readConfigFile("brickbreaker.txt");
             /*Level levelnum= new Level();
             
@@ -56,15 +60,15 @@ public class BrickBreakerStudent {
             }
             System.out.println(levelnum.toString()+row.toString());
             
-}*/
+}
         } catch (FileNotFoundException ex) {
             Logger.getLogger(BrickBreakerStudent.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
        
     }  
        
 // TODO code application logic here
    
-    }
+    
     
 
