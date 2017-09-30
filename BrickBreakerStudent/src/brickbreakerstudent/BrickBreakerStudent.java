@@ -5,6 +5,7 @@
  */
 package brickbreakerstudent;
 
+
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,7 +20,12 @@ public class BrickBreakerStudent {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        GameProfiles game = new GameProfiles();
+        
+            GameProfiles gmpProf=new GameProfiles();
+            BrickBreakerIO.readProfiles(gmpProf, "brickbreakerprofiles.txt");
+    }
+        
+        /*GameProfiles game = new GameProfiles();
         PlayerProfile player=new PlayerProfile("Charles");
         PlayerProfile player2 = new PlayerProfile("Player2");
         player.setNumGamesPlayed(6);
@@ -38,8 +44,8 @@ public class BrickBreakerStudent {
        //System.out.println(player.toString()+player2.toString());
        game.addProfile(player);
        game.addProfile(player2);
-       System.out.println(game.toString());  
-    }
+       System.out.println(game.toString());  */
+
         /*try {
             BrickBreakerIO.readConfigFile("brickbreaker.txt");
             /*Level levelnum= new Level();
