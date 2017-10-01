@@ -87,7 +87,7 @@ public class PlayerProfile {
       format+= name+System.lineSeparator()+ numGamesPlayed+System.lineSeparator()+highScore+System.lineSeparator()+savedGames.size();
       
       for(int i=0;i<savedGames.size();i++){
-     format+=System.lineSeparator()+savedGames.get(i)+i;
+     format+=System.lineSeparator()+savedGames.get(i);
      
      
      }

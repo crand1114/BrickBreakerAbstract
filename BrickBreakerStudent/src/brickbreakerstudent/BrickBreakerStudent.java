@@ -21,14 +21,27 @@ public class BrickBreakerStudent {
      */
     public static void main(String[] args) {
         
-            GameProfiles gmpProf=new GameProfiles();
-            BrickBreakerIO.readProfiles(gmpProf, "brickbreakerprofiles.txt");
-    }
+           // BrickBreakerIO.readConfigFile("brickbreaker.txt");
+            GameProfiles gameProf=new GameProfiles();
+            BrickBreakerIO.readProfiles(gameProf, "brickbreakerprofiles.txt");
+            PlayerProfile player=new PlayerProfile("Charles");
+            player.setNumGamesPlayed(2);
+            player.setHighScore(2017);
+           // player.addSavedGame("Save");
+            //player.addSavedGame("Save");
+            gameProf.addProfile(player);
+            BrickBreakerIO.writeProfiles(gameProf, "newbrickbreakerprofile.txt");//adds the new profile to the list of other profiles and creates new file 
+            BrickBreakerIO.readProfiles(gameProf,"newbrickbreakerprofile.txt");
+            
+    
+}
+       
+    }  
         
         /*GameProfiles game = new GameProfiles();
         PlayerProfile player=new PlayerProfile("Charles");
         PlayerProfile player2 = new PlayerProfile("Player2");
-        player.setNumGamesPlayed(6);
+        
         String item="save";
         String item2="newsave";
         int j=0;
@@ -64,14 +77,10 @@ public class BrickBreakerStudent {
             row.setColor(Color.BEIGE);
             
             }
-            System.out.println(levelnum.toString()+row.toString());
+            System.out.println(levelnum.toString()+row.toString());*/
             
-}
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(BrickBreakerStudent.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
-       
-    }  
+
+        
        
 // TODO code application logic here
    

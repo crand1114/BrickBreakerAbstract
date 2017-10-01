@@ -19,6 +19,8 @@ public class GameProfiles {
     
     public GameProfiles(){
         profiles=new ArrayList<PlayerProfile>();
+        selectedProfile=new PlayerProfile();
+        highGameProfile=new PlayerProfile();
     }
     public PlayerProfile getSelectedProfile(){
         return selectedProfile;

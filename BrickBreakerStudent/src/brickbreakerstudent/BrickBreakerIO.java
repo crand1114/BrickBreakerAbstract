@@ -7,6 +7,7 @@ package brickbreakerstudent;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Logger;
 import javafx.scene.paint.Color;
@@ -21,11 +22,12 @@ import javafx.scene.paint.Color;
  */
 public class BrickBreakerIO {
     
-    public static void readConfigFile(String cFileName){ 
+    public static Level[] readConfigFile(String cFileName){ 
+        Level [] num=new Level[0];
       try{
         Scanner input = new Scanner(new File(cFileName));
        int numlvl= Integer.parseInt(input.next());
-       Level num []= new Level[numlvl];
+        num= new Level[numlvl];
        
        for(int i=0;i<num.length;i++){
           int levelnum= Integer.parseInt(input.next());
@@ -52,6 +54,7 @@ public class BrickBreakerIO {
           System.out.println("File could not be read");
           System.exit(-1);
       }
+      return num;
     }
       
       
@@ -60,19 +63,31 @@ public class BrickBreakerIO {
                Scanner input = new Scanner(new File(pFileName));
                PlayerProfile profile=new PlayerProfile();
                while(input.hasNext()){
-                 profile.setName(input.next());
+                 profile=new PlayerProfile(input.next());
                  profile.setNumGamesPlayed(Integer.parseInt(input.next()));
                  profile.setHighScore(Integer.parseInt(input.next()));
                  int numSaved=Integer.parseInt(input.next());
                  for(int i=0;i<numSaved;i++)
                  profile.addSavedGame(input.next());
+                 gmProf.addProfile(profile);
                  }
-               gmProf.addProfile(profile);
+               
                System.out.println(gmProf.toString());
            } catch (FileNotFoundException ex) {
+               System.out.println("file not read");
             Logger.getLogger(BrickBreakerIO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
            
+       }
+       public static void writeProfiles(GameProfiles gmProf, String pFileName){
+          try{
+              PrintWriter input = new PrintWriter(pFileName) ;
+              PrintWriter output= new PrintWriter(input);
+              output.write(gmProf.toString());
+          } catch (FileNotFoundException ex) {
+            Logger.getLogger(BrickBreakerIO.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+          
        }
     }
     
