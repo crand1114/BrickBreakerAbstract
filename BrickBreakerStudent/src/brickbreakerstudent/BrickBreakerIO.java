@@ -20,16 +20,18 @@ import javafx.scene.paint.Color;
  */
 public class BrickBreakerIO {
     
-    public static void readConfigFile(String cFileName) throws FileNotFoundException{
-      try{
+    public static Level[] readConfigFile(String cFileName) throws FileNotFoundException {
+    Level[] num = new Level[0];
+        try{
         Scanner input = new Scanner(new File(cFileName));
        int numlvl= Integer.parseInt(input.next());
-       Level num []= new Level[numlvl];
+       num =new Level[numlvl];
        
        for(int i=0;i<num.length;i++){
           int levelnum= Integer.parseInt(input.next());
           int numBkRow=Integer.parseInt(input.next());
            num[i]=new Level(levelnum,numBkRow);
+          
            for(int j=0; j<numBkRow;j++){
                int bkRowNum=Integer.parseInt(input.next());
                int red=Integer.parseInt(input.next());
@@ -43,10 +45,12 @@ public class BrickBreakerIO {
                BrickRow bkset=new BrickRow(ptVal,clr,bMask);
                num[i].setBrickRows(bkRowNum, bkset);
                
+               
            }
            System.out.println(num[i].toString());
+           
        }
-       
+        
        
        
        
@@ -56,6 +60,7 @@ public class BrickBreakerIO {
           
       }
         
+      return num;  
        
     }
     

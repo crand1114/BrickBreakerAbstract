@@ -37,26 +37,19 @@ public class BrickBreakerStudent {
        System.out.println(player.toString());
            
         */try {
-            BrickBreakerIO.readConfigFile("brickbreaker.txt");
+           BrickBreakerIO.readConfigFile("brickbreaker.txt");
             /*Level levelnum= new Level();
-            
             BrickRow row = new BrickRow();
-            
             for (int i=0; i<11; i++) {
             levelnum.setBrickRows(i, row);
             levelnum.setLevelNum(i);
-            
-            
             for(int j=0; j<20;j++){
-            
             row.setBrickMaskValue(j, true);
             row.setPointValue(10);
             row.setColor(Color.BEIGE);
-            
             }
             System.out.println(levelnum.toString()+row.toString());
-            
-}*/
+            }*/
         } catch (FileNotFoundException ex) {
             Logger.getLogger(BrickBreakerStudent.class.getName()).log(Level.SEVERE, null, ex);
         }
