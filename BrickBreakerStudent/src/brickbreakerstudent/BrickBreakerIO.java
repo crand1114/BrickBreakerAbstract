@@ -20,11 +20,12 @@ import javafx.scene.paint.Color;
  */
 public class BrickBreakerIO {
     
-    public static void readConfigFile(String cFileName) throws FileNotFoundException{
-      try{
+    public static Level[] readConfigFile(String cFileName) throws FileNotFoundException{
+      Level[] num=new Level[0];
+        try{
         Scanner input = new Scanner(new File(cFileName));
        int numlvl= Integer.parseInt(input.next());
-       Level num []= new Level[numlvl];
+       num= new Level[numlvl];
        
        for(int i=0;i<num.length;i++){
           int levelnum= Integer.parseInt(input.next());
@@ -55,7 +56,7 @@ public class BrickBreakerIO {
           
       }
         
-       
+       return num;
     }
     
 }
