@@ -16,6 +16,7 @@ public class GameProfiles {
     private PlayerProfile selectedProfile;
     private PlayerProfile highGameProfile;
     private ArrayList<PlayerProfile>profiles;
+    private String profileFilename;
     
     public GameProfiles(){
         profiles=new ArrayList<PlayerProfile>();
@@ -57,4 +58,18 @@ public class GameProfiles {
     }
         return playform;
 }
+
+    /**
+     * @return the profileFilename
+     */
+    public String getProfileFilename() {
+        return profileFilename;
+    }
+
+    /**
+     * @param profileFilename the profileFilename to set
+     */
+    public void setProfileFilename(String profileFilename) {
+        this.profileFilename = profileFilename;
+    }
 }

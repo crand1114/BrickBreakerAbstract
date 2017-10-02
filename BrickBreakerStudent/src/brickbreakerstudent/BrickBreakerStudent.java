@@ -24,16 +24,16 @@ public class BrickBreakerStudent {
            // BrickBreakerIO.readConfigFile("brickbreaker.txt");
             GameProfiles gameProf=new GameProfiles();
             BrickBreakerIO.readProfiles(gameProf, "brickbreakerprofiles.txt");
-            PlayerProfile player=new PlayerProfile("Charles");
+             PlayerProfile player=new PlayerProfile("Charles");
             player.setNumGamesPlayed(2);
             player.setHighScore(2017);
-           // player.addSavedGame("Save");
-            //player.addSavedGame("Save");
             gameProf.addProfile(player);
-            BrickBreakerIO.writeProfiles(gameProf, "newbrickbreakerprofile.txt");//adds the new profile to the list of other profiles and creates new file 
-            BrickBreakerIO.readProfiles(gameProf,"newbrickbreakerprofile.txt");
+
+            BrickBreakerIO.writeProfiles(gameProf, "newprofile.txt");//adds the new profile to the list of other profiles and creates new file 
+           
+            BrickBreakerIO.readProfiles(gameProf, "newprofile.txt");
             
-    
+
 }
        
     }  
